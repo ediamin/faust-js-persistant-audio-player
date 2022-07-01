@@ -3,6 +3,7 @@ import { client, Post } from 'client';
 import { Footer, Header, Hero } from 'components';
 import { GetStaticPropsContext } from 'next';
 import Head from 'next/head';
+import AudioPlayer from "components/AudioPlayer";
 
 export interface PostProps {
   post: Post | Post['preview']['node'] | null | undefined;
@@ -32,6 +33,9 @@ export function PostComponent({ post }: PostProps) {
 
       <main className="content content-single">
         <div className="wrap">
+          <div>
+            <AudioPlayer />
+          </div>
           <div dangerouslySetInnerHTML={{ __html: post?.content() ?? '' }} />
         </div>
       </main>
