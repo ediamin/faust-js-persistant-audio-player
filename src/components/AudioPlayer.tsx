@@ -15,7 +15,7 @@ const AudioPlayer = (): JSX.Element => {
     <div className={styles.wrap}>
       <p><strong>Here is an audio player</strong></p>
       {isPlaying ? (
-        <button onClick={() => setIsPlaying(false)}>Pause</button>
+        <button onClick={() => setIsPlaying(false)}>Stop</button>
       ) : (
         <button onClick={startPlaying}>Play</button>
       )}
